@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingBag, Search, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Logo } from './Logo';
+import { companyInfo } from '@/data/products';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +43,7 @@ export function Navbar() {
               to="/" 
               className="text-sm font-medium hover:text-accent transition-colors duration-200"
             >
-              Collections
+              Our Cookies
             </Link>
             <Link 
               to="/" 
@@ -57,21 +59,21 @@ export function Navbar() {
             className="hidden md:flex w-8 h-8 items-center justify-center rounded-full hover:bg-secondary transition-colors duration-200"
             aria-label="Search"
           >
-            <Search size={20} className="text-foreground/80" />
+            <Search className="h-5 w-5 text-foreground/80" />
           </button>
           
           <button 
             className="hidden md:flex w-8 h-8 items-center justify-center rounded-full hover:bg-secondary transition-colors duration-200"
             aria-label="Account"
           >
-            <User size={20} className="text-foreground/80" />
+            <User className="h-5 w-5 text-foreground/80" />
           </button>
           
           <button 
             className="flex w-8 h-8 items-center justify-center rounded-full hover:bg-secondary transition-colors duration-200 relative"
             aria-label="Cart"
           >
-            <ShoppingBag size={20} className="text-foreground/80" />
+            <ShoppingBag className="h-5 w-5 text-foreground/80" />
             <span className="absolute top-0 right-0 flex items-center justify-center w-4 h-4 bg-accent text-[10px] font-medium text-white rounded-full">
               0
             </span>
@@ -83,9 +85,9 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X size={20} className="text-foreground/80" />
+              <X className="h-5 w-5 text-foreground/80" />
             ) : (
-              <Menu size={20} className="text-foreground/80" />
+              <Menu className="h-5 w-5 text-foreground/80" />
             )}
           </button>
         </div>
@@ -107,7 +109,7 @@ export function Navbar() {
                 className="text-lg font-medium hover:text-accent transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Collections
+                Our Cookies
               </Link>
               <Link 
                 to="/" 
@@ -123,7 +125,7 @@ export function Navbar() {
                 className="flex items-center justify-center px-4 py-2 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <Search size={18} className="mr-2" />
+                <Search className="h-4 w-4 mr-2" />
                 Search
               </button>
               
@@ -131,7 +133,7 @@ export function Navbar() {
                 className="flex items-center justify-center px-4 py-2 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <User size={18} className="mr-2" />
+                <User className="h-4 w-4 mr-2" />
                 Account
               </button>
             </div>
