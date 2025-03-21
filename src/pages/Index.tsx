@@ -139,41 +139,6 @@ const Index = () => {
                     Pure Desi Ghee, Whole Wheat Flour, Almonds, Oats, Honey, Natural Flavors.
                     No Palm Oil, No Preservatives, No Trans Fats, No Artificial Colors or Flavors.
                   </p>
-                  
-                  <h3 className="text-xl font-semibold mt-8 mb-4">Nutrition Facts</h3>
-                  <div className="not-prose border border-border rounded-lg p-5 mt-4">
-                    <div className="grid grid-cols-2 gap-y-3">
-                      <div className="text-sm">Serving Size</div>
-                      <div className="text-sm font-medium">25g (2 cookies)</div>
-                      
-                      <div className="text-sm">Calories</div>
-                      <div className="text-sm font-medium">120</div>
-                      
-                      <div className="text-sm">Total Fat</div>
-                      <div className="text-sm font-medium">6g</div>
-                      
-                      <div className="text-sm">Saturated Fat</div>
-                      <div className="text-sm font-medium">3g</div>
-                      
-                      <div className="text-sm">Trans Fat</div>
-                      <div className="text-sm font-medium">0g</div>
-                      
-                      <div className="text-sm">Sodium</div>
-                      <div className="text-sm font-medium">60mg</div>
-                      
-                      <div className="text-sm">Total Carbohydrates</div>
-                      <div className="text-sm font-medium">16g</div>
-                      
-                      <div className="text-sm">Dietary Fiber</div>
-                      <div className="text-sm font-medium">2g</div>
-                      
-                      <div className="text-sm">Sugars</div>
-                      <div className="text-sm font-medium">8g</div>
-                      
-                      <div className="text-sm">Protein</div>
-                      <div className="text-sm font-medium">3g</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </TabsContent>
