@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,6 +6,7 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { ProductInfo } from "@/components/ProductInfo";
 import { ReviewSection } from "@/components/ReviewSection";
 import { RelatedProducts } from "@/components/RelatedProducts";
+import { Logo } from "@/components/Logo";
 import { Product, Review } from "@/types";
 
 // Mock product data (will be replaced with Supabase data later)
@@ -341,7 +341,7 @@ const Index = () => {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold">Crumb Haven</h4>
+              <Logo size="large" className="mb-2" />
               <p className="text-sm text-muted-foreground">
                 Artisan bread and pastries, handcrafted with love and tradition since 2015.
               </p>

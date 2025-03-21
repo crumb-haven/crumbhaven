@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingBag, Search, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Logo } from './Logo';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,12 +28,7 @@ export function Navbar() {
     >
       <div className="container flex items-center justify-between">
         <div className="flex items-center space-x-10">
-          <Link 
-            to="/" 
-            className="text-2xl font-serif font-semibold tracking-tight"
-          >
-            Crumb Haven
-          </Link>
+          <Logo size="medium" />
           
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
@@ -96,7 +91,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-md border-t border-border animate-fade-in">
           <div className="container py-6 space-y-6">
