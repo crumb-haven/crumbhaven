@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -6,14 +7,15 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { ProductInfo } from "@/components/ProductInfo";
 import { ReviewSection } from "@/components/ReviewSection";
 import { RelatedProducts } from "@/components/RelatedProducts";
+import { BrandFeatures } from "@/components/BrandFeatures";
 import { Logo } from "@/components/Logo";
 import { featuredProduct, relatedProducts, companyInfo } from "@/data/products";
 
-// Mock reviews data
+// Mock reviews data with Indian names
 const mockReviews = [
   {
     id: "rev1",
-    author: "Alex M.",
+    author: "Priya Sharma",
     date: "1 month ago",
     rating: 5,
     title: "Best cookies I've ever had",
@@ -22,7 +24,7 @@ const mockReviews = [
   },
   {
     id: "rev2",
-    author: "Sophia K.",
+    author: "Ananya Patel",
     date: "2 weeks ago",
     rating: 5,
     title: "Worth every penny",
@@ -31,7 +33,7 @@ const mockReviews = [
   },
   {
     id: "rev3",
-    author: "Michael T.",
+    author: "Rahul Verma",
     date: "1 month ago",
     rating: 4,
     title: "Excellent texture and flavor",
@@ -40,7 +42,7 @@ const mockReviews = [
   },
   {
     id: "rev4",
-    author: "Emma L.",
+    author: "Meera Iyer",
     date: "3 weeks ago",
     rating: 5,
     title: "Finally, cookies that don't upset my stomach!",
@@ -49,12 +51,39 @@ const mockReviews = [
   },
   {
     id: "rev5",
-    author: "David R.",
+    author: "Arjun Singh",
     date: "2 months ago",
-    rating: 3,
-    title: "Good, but arrived a bit crushed",
-    comment: "The cookies themselves are delicious, but my package arrived with some broken pieces. I understand shipping cookies is challenging, but maybe the packaging could be improved? The taste is still excellent though.",
-    helpful: 9
+    rating: 5,
+    title: "Authentic taste, reminds me of homemade",
+    comment: "These cookies remind me of the ones my grandmother used to make. The use of desi ghee makes all the difference. The texture is perfect - crisp on the outside, slightly chewy inside.",
+    helpful: 16
+  },
+  {
+    id: "rev6",
+    author: "Kavita Desai",
+    date: "3 weeks ago",
+    rating: 5,
+    title: "Perfect guilt-free snack",
+    comment: "Love that these are made with clean ingredients. No preservatives, no palm oil - just wholesome goodness. And they taste amazing! Perfect with my evening chai.",
+    helpful: 22
+  },
+  {
+    id: "rev7",
+    author: "Vikram Reddy",
+    date: "1 month ago",
+    rating: 5,
+    title: "Great alternative to processed cookies",
+    comment: "As someone who's health-conscious, I'm always looking for better alternatives to processed foods. These cookies are perfect - natural ingredients, no preservatives, and they taste amazing!",
+    helpful: 19
+  },
+  {
+    id: "rev8",
+    author: "Deepa Gupta",
+    date: "2 months ago",
+    rating: 5,
+    title: "Kids love them too!",
+    comment: "I bought these for myself but my kids ended up loving them too! It's so nice to find a treat that's both delicious and made with quality ingredients I can feel good about giving to my family.",
+    helpful: 27
   }
 ];
 
@@ -86,8 +115,11 @@ const Index = () => {
           </div>
         </div>
         
+        {/* Brand Features Banner */}
+        <BrandFeatures className="mt-16" />
+        
         {/* Details & Reviews Tabs */}
-        <div className="mt-16 border-t border-border pt-8">
+        <div className="mt-8 border-t border-border pt-8">
           <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="mb-8 w-full border-b border-border rounded-none bg-transparent h-auto p-0 space-x-8">
               <TabsTrigger 

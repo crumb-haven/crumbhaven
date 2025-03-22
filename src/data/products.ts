@@ -26,8 +26,8 @@ export const products: Product[] = [
       "No Preservatives; no Transfats",
       "Goodness of Almonds and Oats"
     ],
-    rating: 4.8,
-    reviewCount: 127,
+    rating: 4.9,
+    reviewCount: 160,
     stockStatus: "in-stock",
     isNew: true
   },
@@ -83,8 +83,8 @@ export const products: Product[] = [
       "No Preservatives; no Transfats",
       "Goodness of Kodo millet"
     ],
-    rating: 4.7,
-    reviewCount: 98,
+    rating: 4.8,
+    reviewCount: 128,
     stockStatus: "low-stock",
     isNew: true
   },
@@ -112,7 +112,7 @@ export const products: Product[] = [
       "Goodness of Oats and Honey"
     ],
     rating: 4.8,
-    reviewCount: 112,
+    reviewCount: 142,
     stockStatus: "in-stock",
     isNew: false
   }
