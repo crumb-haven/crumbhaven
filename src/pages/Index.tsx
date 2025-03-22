@@ -1,15 +1,13 @@
-
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Navbar } from "@/components/Navbar";
 import { ProductGallery } from "@/components/ProductGallery";
-import { ProductInfo } from "@/components/ProductInfo";
 import { ReviewSection } from "@/components/ReviewSection";
 import { RelatedProducts } from "@/components/RelatedProducts";
 import { BrandFeatures } from "@/components/BrandFeatures";
 import { Logo } from "@/components/Logo";
-import { featuredProduct, relatedProducts, companyInfo } from "@/data/products";
+import { relatedProducts, companyInfo } from "@/data/products";
 
 // Mock reviews data with Indian names
 const mockReviews = [
@@ -93,52 +91,67 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>{featuredProduct.name} | {companyInfo.name}</title>
-        <meta name="description" content={featuredProduct.description.substring(0, 155)} />
+        <title>Crumb Haven | Healthy Delicious Cookies</title>
+        <meta name="description" content="At Crumb Haven, we craft cookies with pure desi ghee and wholesome ingredients. No preservatives, no trans fats, just pure goodness." />
       </Helmet>
       
       <Navbar />
       
       <main className="pt-24 pb-16 container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Product Gallery */}
+          {/* Brand Showcase */}
           <div className="sticky top-24 h-fit max-h-[calc(100vh-180px)]">
-            <ProductGallery 
-              images={featuredProduct.images} 
-              productName={featuredProduct.name} 
-            />
+            <div className="product-image-container overflow-hidden rounded-2xl shadow-product">
+              <img 
+                src="/lovable-uploads/74df9f08-5863-436b-9f5d-71bee2ecce4e.png" 
+                alt="Crumb Haven Cookies" 
+                className="w-full h-auto object-cover rounded-2xl transition-all duration-500 hover:scale-105"
+              />
+            </div>
           </div>
           
-          {/* Product Info */}
+          {/* Brand Info */}
           <div>
-            <ProductInfo product={featuredProduct} />
+            <div className="space-y-8">
+              <div>
+                <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-primary">Crumb Haven</h1>
+                <p className="mt-4 text-xl text-muted-foreground">
+                  Where Tradition Meets Health
+                </p>
+              </div>
+              
+              <div className="prose max-w-none text-muted-foreground">
+                <p>
+                  {companyInfo.description}
+                </p>
+              </div>
+              
+              <BrandFeatures showTitle={false} />
+            </div>
           </div>
         </div>
         
-        {/* Brand Features Banner */}
-        <BrandFeatures className="mt-16" />
+        {/* Related Products (now as primary products showcase) */}
+        <div className="mt-24">
+          <h2 className="text-3xl font-serif font-semibold mb-8">Our Special Cookies</h2>
+          <RelatedProducts products={relatedProducts} />
+        </div>
         
         {/* Details & Reviews Tabs */}
-        <div className="mt-8 border-t border-border pt-8">
+        <div className="mt-16 border-t border-border pt-8">
           <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="mb-8 w-full border-b border-border rounded-none bg-transparent h-auto p-0 space-x-8">
               <TabsTrigger 
                 value="details" 
                 className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent bg-transparent p-0 pb-3 px-2 data-[state=active]:shadow-none text-base font-medium text-muted-foreground data-[state=active]:text-foreground transition-all"
               >
-                Product Details
+                Our Story
               </TabsTrigger>
               <TabsTrigger 
                 value="reviews" 
                 className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent bg-transparent p-0 pb-3 px-2 data-[state=active]:shadow-none text-base font-medium text-muted-foreground data-[state=active]:text-foreground transition-all"
               >
-                Reviews ({featuredProduct.reviewCount})
-              </TabsTrigger>
-              <TabsTrigger 
-                value="about" 
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent bg-transparent p-0 pb-3 px-2 data-[state=active]:shadow-none text-base font-medium text-muted-foreground data-[state=active]:text-foreground transition-all"
-              >
-                About Crumb Haven
+                Customer Reviews
               </TabsTrigger>
               <TabsTrigger 
                 value="shipping" 
@@ -149,41 +162,6 @@ const Index = () => {
             </TabsList>
             
             <TabsContent value="details" className="mt-0 animate-fade-in">
-              <div className="space-y-8">
-                <div className="prose max-w-none">
-                  <h3 className="text-xl font-semibold mb-4">About the Product</h3>
-                  <p>
-                    {featuredProduct.description}
-                  </p>
-                  
-                  <h3 className="text-xl font-semibold mt-8 mb-4">Key Features</h3>
-                  <ul className="space-y-2">
-                    {featuredProduct.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="mr-2 text-accent">•</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <h3 className="text-xl font-semibold mt-8 mb-4">Ingredients</h3>
-                  <p>
-                    Pure Desi Ghee, Whole Wheat Flour, Almonds, Oats, Honey, Natural Flavors.
-                    No Palm Oil, No Preservatives, No Trans Fats, No Artificial Colors or Flavors.
-                  </p>
-                </div>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="reviews" className="mt-0 animate-fade-in">
-              <ReviewSection 
-                reviews={mockReviews} 
-                productRating={featuredProduct.rating} 
-                reviewCount={featuredProduct.reviewCount} 
-              />
-            </TabsContent>
-            
-            <TabsContent value="about" className="mt-0 animate-fade-in">
               <div className="space-y-8">
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold mb-4">About Crumb Haven</h3>
@@ -210,6 +188,14 @@ const Index = () => {
                   </p>
                 </div>
               </div>
+            </TabsContent>
+            
+            <TabsContent value="reviews" className="mt-0 animate-fade-in">
+              <ReviewSection 
+                reviews={mockReviews} 
+                productRating={featuredProduct.rating} 
+                reviewCount={featuredProduct.reviewCount} 
+              />
             </TabsContent>
             
             <TabsContent value="shipping" className="mt-0 animate-fade-in">
@@ -250,9 +236,6 @@ const Index = () => {
             </TabsContent>
           </Tabs>
         </div>
-        
-        {/* Related Products */}
-        <RelatedProducts products={relatedProducts} />
       </main>
       
       {/* Footer */}
