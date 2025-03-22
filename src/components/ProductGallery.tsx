@@ -32,7 +32,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
             src={images[activeIndex]}
             alt={`${productName} - Image ${activeIndex + 1}`}
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover w-full h-full transition-opacity opacity-100 duration-300"
+            className="object-contain w-full h-full transition-opacity opacity-100 duration-300"
           />
         </AspectRatio>
         
@@ -73,7 +73,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
                 <img
                   src={image}
                   alt={`${productName} - Thumbnail ${i + 1}`}
-                  className="object-cover"
+                  className="object-contain"
                 />
               </AspectRatio>
             </button>

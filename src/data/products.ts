@@ -6,11 +6,10 @@ export const products: Product[] = [
   {
     id: "almond-oat-cookies",
     name: "Almond Oat Cookies",
-    description: "A wholesome blend of nutrient-rich oats, premium almonds, and whole wheat flour, our Almond Oat Cookies offer the perfect balance of taste and health. Made exclusively with pure Desi ghee—never palm oil—these cookies bring home a rich, authentic flavour while staying free from trans fats and preservatives. Whether you're looking for a guilt-free snack or a nourishing treat, this clean-label delight ensures pure indulgence with every bite.",
+    description: "A wholesome blend of nutrient-rich oats, premium almonds, and whole wheat flour, our Almond Oat Cookies offer the perfect balance of taste and health. Made exclusively with pure Desi ghee—never palm oil—these cookies bring home a rich, authentic flavour while staying free from trans fats and preservatives.",
     price: 199,
     images: [
-      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "/lovable-uploads/74df9f08-5863-436b-9f5d-71bee2ecce4e.png",
     ],
     colors: [
       { id: "natural", name: "Natural", value: "#E8D7C1" }
@@ -21,11 +20,11 @@ export const products: Product[] = [
       { id: "500g", name: "500g Family Pack", availability: "limited" }
     ],
     features: [
-      "Pure Desi Ghee – No palm oil, just authentic flavour",
-      "Whole Wheat Goodness – No maida, just wholesome grains",
-      "Zero Trans Fat, No Palm Oil, No Preservatives – Clean, guilt-free indulgence",
-      "Nutrient-Dense – Infused with almonds and oats for sustained energy",
-      "Traditionally Inspired, Health-Conscious – Crafted for taste and wellness"
+      "100% Desi Ghee used",
+      "No Palm Oil",
+      "No Maida",
+      "No Preservatives; no Transfats",
+      "Goodness of Almonds and Oats"
     ],
     rating: 4.8,
     reviewCount: 127,
@@ -34,12 +33,11 @@ export const products: Product[] = [
   },
   {
     id: "chocochip-brownie-cookies",
-    name: "Chocochip Brownie Cookies",
-    description: "For those who crave intense chocolate flavour with a crunch, our Choco Chip Brownie Cookies are the perfect treat. Combining the fudgy richness of brownies with crispy choco chips, these cookies redefine indulgence without compromising on health. Made with pure Desi ghee (never palm oil), zero trans fats, and no preservatives, each bite is a decadent yet guilt-free delight.",
+    name: "Chocolate Brownie Cookies",
+    description: "For those who crave intense chocolate flavour with a crunch, our Choco Chip Brownie Cookies are the perfect treat. Combining the fudgy richness of brownies with crispy choco chips, these cookies redefine indulgence without compromising on health. Made with pure Desi ghee (never palm oil), zero trans fats, and no preservatives.",
     price: 219,
     images: [
-      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "/lovable-uploads/56916dc4-d22b-43fd-826a-acade469f371.png",
     ],
     colors: [
       { id: "chocolate", name: "Chocolate", value: "#5C4033" }
@@ -50,11 +48,10 @@ export const products: Product[] = [
       { id: "500g", name: "500g Family Pack", availability: "limited" }
     ],
     features: [
-      "Decadent Brownie Taste – Fudgy, chocolaty, and satisfying",
-      "Pure Desi Ghee Goodness – No palm oil, only authentic ingredients",
-      "Zero Trans Fat, No Preservatives, No Palm Oil – Made for guilt-free indulgence",
-      "Crispy Choco Chips – Perfectly balanced texture",
-      "Clean Label & Health-Conscious – Rich taste, mindful ingredients"
+      "100% Desi Ghee used",
+      "No Palm Oil",
+      "No Preservatives; no Transfats",
+      "Infused with rich chocochip brownies"
     ],
     rating: 4.9,
     reviewCount: 156,
@@ -64,12 +61,11 @@ export const products: Product[] = [
   {
     id: "kodo-millet-cookies",
     name: "Kodo Millet Cookies",
-    description: "Power-packed with protein, fiber, and ancient grain goodness, our Kodo Millet Cookies are completely wheat-free, making them the perfect choice for gluten-sensitive or health-conscious consumers. Crafted with pure Desi ghee, zero refined sugar, and no preservatives, these cookies offer a light yet satisfying crunch while promoting better digestion and sustained energy.",
+    description: "Power-packed with protein, fiber, and ancient grain goodness, our Kodo Millet Cookies are completely wheat-free, making them the perfect choice for gluten-sensitive or health-conscious consumers. Crafted with pure Desi ghee, zero refined sugar, and no preservatives, these cookies offer a light yet satisfying crunch.",
     price: 239,
     discountedPrice: 219,
     images: [
-      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "/lovable-uploads/20258625-add7-4ea3-92f0-fb7eb3b3f3f8.png",
     ],
     colors: [
       { id: "natural", name: "Natural", value: "#F4E9D7" }
@@ -80,11 +76,12 @@ export const products: Product[] = [
       { id: "500g", name: "500g Family Pack", availability: "limited" }
     ],
     features: [
-      "Wheat-Free & Wholesome – Perfect for mindful snackers",
-      "Protein & Fiber-Rich – Powered by Kodo millet for better health",
-      "Pure Desi Ghee Flavour – No palm oil, only traditional richness",
-      "No Refined Sugar, No Preservatives, No Palm Oil – Naturally nourishing",
-      "Balanced & Guilt-Free – The perfect mix of taste and nutrition"
+      "Wheat-free",
+      "No Refined Sugar",
+      "100% Desi Ghee used",
+      "No Palm Oil",
+      "No Preservatives; no Transfats",
+      "Goodness of Kodo millet"
     ],
     rating: 4.7,
     reviewCount: 98,
@@ -97,8 +94,7 @@ export const products: Product[] = [
     description: "Infused with the natural sweetness of honey and the nutritional power of oats, our Honey Oat Cookies deliver the perfect harmony of taste and health. Made with pure Desi ghee, zero trans fats, and no preservatives, these cookies are a wholesome snack that supports your well-being while satisfying your sweet cravings.",
     price: 199,
     images: [
-      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "/lovable-uploads/3a89828c-0df5-4eb4-b462-6b2fa3f75cc9.png",
     ],
     colors: [
       { id: "golden", name: "Golden", value: "#E8D197" }
@@ -109,11 +105,11 @@ export const products: Product[] = [
       { id: "500g", name: "500g Family Pack", availability: "limited" }
     ],
     features: [
-      "Hearty Oats for Sustained Energy – Wholesome and filling",
-      "Made with Pure Desi Ghee – No palm oil, just authentic taste",
-      "No Palm Oil, No Preservatives, Zero Trans Fat – Clean-label snacking",
-      "Perfect Balance of Health & Indulgence – Guilt-free treat",
-      "Clean Label & Health-Conscious – Rich taste, mindful ingredients"
+      "100% Desi Ghee used",
+      "No Palm Oil",
+      "No Preservatives",
+      "No Transfats",
+      "Goodness of Oats and Honey"
     ],
     rating: 4.8,
     reviewCount: 112,
@@ -133,11 +129,11 @@ export const companyInfo = {
   name: "Crumb Haven",
   description: "At Crumb Haven, we believe indulgence should be as nourishing as it is delicious. Our cookies are crafted with Pure Desi Ghee, Zero Preservatives, and No Trans Fats, ensuring every bite delivers authentic flavour with clean, wholesome ingredients. We replace processed additives with nature's best, striking the perfect balance between taste and well-being. Every cookie is a testament to our commitment—where tradition meets health, and flavour never takes a backseat.",
   highlights: [
-    "Pure Desi Ghee Goodness – No Palm Oil, ensuring a rich, authentic taste",
-    "Zero Trans Fat & No Preservatives – Clean, guilt-free snacking",
-    "Wholesome Ingredients – Almonds, oats, honey, Kodo millet, and high-quality cocoa",
-    "Perfect for All Occasions – Ideal with tea, as an energy booster, or on-the-go",
-    "Clean Label & Health-Conscious – Rich taste, mindful ingredients"
+    "100% Desi Ghee used",
+    "No Palm Oil",
+    "No Preservatives",
+    "No Transfats",
+    "Goodness of Oats, Millets and Nuts"
   ],
   foundedYear: 2022
 };

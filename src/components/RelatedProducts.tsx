@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '@/types';
-import { ShoppingBag, ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -27,7 +27,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
   return (
     <div className="py-12">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">You Might Also Like</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Our Cookie Collection</h2>
         
         <div className="flex space-x-2">
           <Button
@@ -66,7 +66,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
                 <img
                   src={product.images[0]}
                   alt={product.name}
-                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-105 p-4"
                   loading="lazy"
                 />
                 
@@ -97,30 +97,16 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
                 
                 <h3 className="font-medium line-clamp-1">{product.name}</h3>
                 
-                <div className="flex items-baseline mt-1.5">
-                  {product.discountedPrice ? (
-                    <>
-                      <span className="font-semibold text-accent">${product.discountedPrice.toFixed(2)}</span>
-                      <span className="text-sm text-muted-foreground line-through ml-2">
-                        ${product.price.toFixed(2)}
-                      </span>
-                    </>
-                  ) : (
-                    <span className="font-semibold">${product.price.toFixed(2)}</span>
-                  )}
-                </div>
+                <ul className="mt-2 space-y-1">
+                  {product.features.slice(0, 3).map((feature, index) => (
+                    <li key={index} className="text-xs text-muted-foreground flex items-start">
+                      <span className="mr-1 text-accent text-sm">•</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </Link>
-            
-            <div className="p-5 pt-0">
-              <Button 
-                variant="outline" 
-                className="w-full border-border group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300"
-              >
-                <ShoppingBag className="w-4 h-4 mr-2" />
-                Add to Cart
-              </Button>
-            </div>
           </div>
         ))}
       </div>
