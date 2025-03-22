@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,7 +8,10 @@ import { ReviewSection } from "@/components/ReviewSection";
 import { RelatedProducts } from "@/components/RelatedProducts";
 import { BrandFeatures } from "@/components/BrandFeatures";
 import { Logo } from "@/components/Logo";
-import { relatedProducts, companyInfo } from "@/data/products";
+import { relatedProducts, companyInfo, products } from "@/data/products";
+
+// Use the first product as the featured product for reviews
+const featuredProduct = products[0];
 
 // Mock reviews data with Indian names
 const mockReviews = [
