@@ -22,10 +22,9 @@ export function BrandFeatures({ className, showTitle = true }: BrandFeaturesProp
       )}
       
       <p className="text-muted-foreground mb-8 leading-relaxed">
-        At Crumb Haven, we believe that healthy treats can be delicious too. Our cookies are crafted with care, 
-        using only the finest ingredients to ensure you get the best taste without compromising on your well-being.
-        We replace processed additives with nature's best, striking the perfect balance between taste and health.
-        Every cookie is a testament to our commitment—where tradition meets health, and flavour never takes a backseat.
+        At Crumb Haven, we combine traditional methods with premium ingredients to create cookies 
+        that are both healthy and delicious. We use nature's finest ingredients, never compromising 
+        on quality or taste.
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

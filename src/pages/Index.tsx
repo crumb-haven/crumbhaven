@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -102,36 +101,23 @@ const Index = () => {
       <Navbar />
       
       <main className="pt-24 pb-16 container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Brand Showcase */}
-          <div className="sticky top-24 h-fit max-h-[calc(100vh-180px)]">
-            <div className="product-image-container overflow-hidden rounded-2xl shadow-product">
-              <img 
-                src="/lovable-uploads/74df9f08-5863-436b-9f5d-71bee2ecce4e.png" 
-                alt="Crumb Haven Cookies" 
-                className="w-full h-auto object-cover rounded-2xl transition-all duration-500 hover:scale-105"
-              />
+        {/* Brand Info - Full Width */}
+        <div className="mb-12">
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-primary">Crumb Haven</h1>
+              <p className="mt-4 text-xl text-muted-foreground">
+                Where Tradition Meets Health
+              </p>
             </div>
-          </div>
-          
-          {/* Brand Info */}
-          <div>
-            <div className="space-y-8">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-primary">Crumb Haven</h1>
-                <p className="mt-4 text-xl text-muted-foreground">
-                  Where Tradition Meets Health
-                </p>
-              </div>
-              
-              <div className="prose max-w-none text-muted-foreground">
-                <p>
-                  {companyInfo.description}
-                </p>
-              </div>
-              
-              <BrandFeatures showTitle={false} />
+            
+            <div className="prose max-w-none text-muted-foreground">
+              <p>
+                {companyInfo.description}
+              </p>
             </div>
+            
+            <BrandFeatures showTitle={false} />
           </div>
         </div>
         
@@ -170,7 +156,7 @@ const Index = () => {
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold mb-4">About Crumb Haven</h3>
                   <p>
-                    {companyInfo.description}
+                    At Crumb Haven, we craft cookies that blend traditional methods with wholesome ingredients. Our commitment to purity means we use only the finest desi ghee, whole grains, and natural sweeteners.
                   </p>
                   
                   <h4 className="text-lg font-medium mt-6 mb-3">Our Commitment</h4>
